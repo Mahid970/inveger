@@ -1,0 +1,64 @@
+<button class="btn bg-blue-500 text-white text-xl hover:bg-blue-700" onclick="my_modal_1.showModal()">Add Cow <i class="fa-regular fa-square-plus"></i></button>
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box w-11/12 max-w-5xl">
+    <form class=" input-form lg:w-full" action="#" method="post">
+        <label for="name">Your Full Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Your Email Address:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+       
+      </form>
+    <div class="flex action-btn">
+        <input class="button  text-gray-300" type="submit" value="Send" />
+        <form method="dialog">
+          <!-- if there is a button in form, it will close the modal -->
+          <button class="button">Close</button>
+        </form>
+    </div>
+    </div>
+  </div>
+</dialog> 
+<style>
+    .input-form {
+      display: flex;
+      flex-direction: column;
+
+        
+    }
+
+    label,
+    input,
+    textarea {
+      display: block;
+      margin-bottom: 18px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    label {
+      color: rgb(207, 187, 187);
+    }
+
+    input,
+    textarea {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
+    .button {
+      display: block;
+      width: full;
+      border: 1px solid #ff004f;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.5s;
+    }
+    .button:hover {
+      background: #ff004f;
+    }
+    .action-btn{
+        align-items:center
+        
+    }
